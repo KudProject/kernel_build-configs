@@ -1,0 +1,7 @@
+#!/hint/bash
+BRANCH=kernel.lnx.4.9.r27-rel
+DTC_EXT="${ROOT_DIR}"/prebuilts/kernel-build-tools/linux-x86/bin/dtc
+export DTC_EXT
+DTC_OVERLAY_TEST_EXT="${ROOT_DIR}"/prebuilts/kernel-build-tools/linux-x86/bin/ufdt_apply_overlay
+export DTC_OVERLAY_TEST_EXT
+KERNEL_DIR=private/msm-android-qcom-4.9
