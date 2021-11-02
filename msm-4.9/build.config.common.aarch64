@@ -1,4 +1,5 @@
 #!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common
 ARCH=arm64
 CROSS_COMPILE=aarch64-linux-android-
 CROSS_COMPILE_ARM32=arm-linux-androideabi-
