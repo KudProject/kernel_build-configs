@@ -1,4 +1,5 @@
 #!/hint/bash
+. "${ROOT_DIR}"/build-configs/build.config
 BRANCH=kernel.lnx.4.9.r27-rel
 DTC_EXT="${ROOT_DIR}"/prebuilts/kernel-build-tools/linux-x86/bin/dtc
 export DTC_EXT

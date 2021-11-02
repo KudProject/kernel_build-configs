@@ -1,5 +1,4 @@
 #!/hint/bash
-. "${ROOT_DIR}"/build-configs/build.config
 . "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.aarch64
 DEFCONFIG=msm8953-perf_defconfig
 FILES="
