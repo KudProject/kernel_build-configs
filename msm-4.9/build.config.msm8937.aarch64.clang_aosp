@@ -1,0 +1,4 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.msm8937.aarch64
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.aarch64
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.aosp

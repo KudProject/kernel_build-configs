@@ -1,0 +1,18 @@
+#!/hint/bash
+DEFCONFIG=msm8937-perf_defconfig
+
+function disable_msm8937_configs() {
+    "${KERNEL_DIR}"/scripts/config --file "${OUT_DIR}"/.config \
+        -d ARCH_MSM8917 \
+        -d ARCH_MSM8937 \
+        -d ARCH_MSM8940 \
+        -d ARCH_SDM429 \
+        -d ARCH_SDM439
+    (cd "${OUT_DIR}" && make ${CC_LD_ARG} O="${OUT_DIR}" olddefconfig)
+}
+
+function disable_qm215go_config() {
+    "${KERNEL_DIR}"/scripts/config --file "${OUT_DIR}"/.config \
+        -d ARCH_QM215
+    (cd "${OUT_DIR}" && make ${CC_LD_ARG} O="${OUT_DIR}" olddefconfig)
+}

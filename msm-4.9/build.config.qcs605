@@ -1,0 +1,4 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.sdm670.aarch64
+unset DEFCONFIG
+DEFCONFIG=qcs605-perf_defconfig
