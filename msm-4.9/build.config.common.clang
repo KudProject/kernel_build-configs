@@ -1,3 +1,2 @@
 #!/hint/bash
 CC=clang
-CLANG_TRIPLE=aarch64-linux-gnu-
