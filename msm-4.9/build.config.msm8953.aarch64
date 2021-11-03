@@ -1,6 +1,6 @@
 #!/hint/bash
 . "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.aarch64
-DEFCONFIG=msm8953-perf_defconfig
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.msm8953.common
 FILES="
 .config
 System.map

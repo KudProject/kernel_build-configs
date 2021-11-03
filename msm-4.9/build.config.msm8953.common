@@ -1,0 +1,10 @@
+#!/hint/bash
+DEFCONFIG=msm8953-perf_defconfig
+
+function disable_audiokernel() {
+    sed s/ARCH_MSM8953/ARCH_MSMXX53/g -i "${KERNEL_DIR}"/techpack/audio/Makefile
+}
+
+function enable_audiokernel() {
+    sed s/ARCH_MSMXX53/ARCH_MSM8953/g -i "${KERNEL_DIR}"/techpack/audio/Makefile
+}
