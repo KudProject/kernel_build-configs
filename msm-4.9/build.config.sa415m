@@ -1,0 +1,4 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.sdx24
+unset DEFCONFIG
+DEFCONFIG=sa415m-perf_defconfig

@@ -1,0 +1,31 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.arm
+DEFCONFIG=msm8909-perf_defconfig
+FILES="
+.config
+System.map
+arch/arm/boot/Image
+arch/arm/boot/dts/qcom/apq8009-dragon.dtb
+arch/arm/boot/dts/qcom/apq8009-lat-v1.0.dtb
+arch/arm/boot/dts/qcom/apq8009-mtp-wcd9326-refboard.dtb
+arch/arm/boot/dts/qcom/apq8009-robot-pronto-refboard.dtb
+arch/arm/boot/dts/qcom/apq8009-robot-rome-refboard.dtb
+arch/arm/boot/dts/qcom/apq8009-robot-som-refboard.dtb
+arch/arm/boot/dts/qcom/msm8905-qrd-sku3.dtb
+arch/arm/boot/dts/qcom/msm8905-qrd-skub.dtb
+arch/arm/boot/dts/qcom/msm8905-qrd-skub_qseev4.dtb
+arch/arm/boot/dts/qcom/msm8909-1gb-mtp.dtb
+arch/arm/boot/dts/qcom/msm8909-1gb-qrd-skue.dtb
+arch/arm/boot/dts/qcom/msm8909-mtp.dtb
+arch/arm/boot/dts/qcom/msm8909-pm8916-mtp.dtb
+arch/arm/boot/dts/qcom/sdw2500-apq8009w-wtp.dtb
+arch/arm/boot/dts/qcom/sdw2500-msm8909w-wtp.dtb
+arch/arm/boot/dts/qcom/sdw3100-apq8009w-alpha.dtb
+arch/arm/boot/dts/qcom/sdw3100-apq8009w-wtp.dtb
+arch/arm/boot/dts/qcom/sdw3100-msm8909w-1gb-wtp.dtb
+arch/arm/boot/dts/qcom/sdw3100-msm8909w-wtp.dtb
+arch/arm/boot/zImage
+arch/arm/boot/zImage-dtb
+vmlinux
+"
+POST_DEFCONFIG_CMDS="check_defconfig && set_prima_config"

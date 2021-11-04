@@ -1,0 +1,14 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.arm
+DEFCONFIG=mdm9607-perf_defconfig
+FILES="
+.config
+System.map
+arch/arm/boot/Image
+arch/arm/boot/dts/qcom/mdm9607-mtp.dtb
+arch/arm/boot/dts/qcom/mdm9607-ttp.dtb
+arch/arm/boot/zImage
+arch/arm/boot/zImage-dtb
+vmlinux
+"
+POST_DEFCONFIG_CMDS="check_defconfig && set_qcacld_qca6174_config"

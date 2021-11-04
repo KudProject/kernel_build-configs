@@ -1,0 +1,33 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.arm
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.msm8937.common
+unset DEFCONFIG
+DEFCONFIG=msm8937go-perf_defconfig
+FILES="
+.config
+System.map
+arch/arm/boot/Image
+arch/arm/boot/dts/qcom/apq8017-cdp-overlay.dtbo
+arch/arm/boot/dts/qcom/apq8017-cdp-wcd-rome-overlay.dtbo
+arch/arm/boot/dts/qcom/apq8017-mtp-overlay.dtbo
+arch/arm/boot/dts/qcom/apq8017-pmi8937.dtb
+arch/arm/boot/dts/qcom/apq8017-pmi8950.dtb
+arch/arm/boot/dts/qcom/msm8917-cdp-ext-codec-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-cdp-ml-touch-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-cdp-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-mtp-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-qrd-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-rcm-overlay.dtbo
+arch/arm/boot/dts/qcom/msm8917-pmi8937.dtb
+arch/arm/boot/dts/qcom/msm8917-pmi8940.dtb
+arch/arm/boot/dts/qcom/msm8917-pmi8950.dtb
+arch/arm/boot/dts/qcom/qcm2150-qrd-overlay.dtbo
+arch/arm/boot/dts/qcom/qcm2150.dtb
+arch/arm/boot/dts/qcom/qm215-qrd-overlay.dtbo
+arch/arm/boot/dts/qcom/qm215-qrd-smb1360-overlay.dtbo
+arch/arm/boot/dts/qcom/qm215.dtb
+arch/arm/boot/zImage
+arch/arm/boot/zImage-dtb
+vmlinux
+"
+POST_DEFCONFIG_CMDS="check_defconfig && set_msm8937_32go_config && set_dtbo_config && set_prima_config"

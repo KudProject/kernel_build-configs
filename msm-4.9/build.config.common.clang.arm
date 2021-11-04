@@ -1,0 +1,3 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang
+CLANG_TRIPLE=arm-linux-gnueabi-

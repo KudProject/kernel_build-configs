@@ -1,0 +1,4 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.msm8909go
+unset DEFCONFIG
+DEFCONFIG=msm8909w-perf_defconfig
