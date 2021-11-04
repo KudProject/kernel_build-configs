@@ -28,6 +28,11 @@ arch/arm64/boot/dts/qcom/msm8940-mtp-overlay.dtbo
 arch/arm64/boot/dts/qcom/msm8940-pmi8937.dtb
 arch/arm64/boot/dts/qcom/msm8940-pmi8940.dtb
 arch/arm64/boot/dts/qcom/msm8940-pmi8950.dtb
+arch/arm64/boot/dts/qcom/qcm2150-qrd-overlay.dtbo
+arch/arm64/boot/dts/qcom/qcm2150.dtb
+arch/arm64/boot/dts/qcom/qm215-qrd-overlay.dtbo
+arch/arm64/boot/dts/qcom/qm215-qrd-smb1360-overlay.dtbo
+arch/arm64/boot/dts/qcom/qm215.dtb
 arch/arm64/boot/dts/qcom/sda429-bg-dvt2-wtp-overlay.dtbo
 arch/arm64/boot/dts/qcom/sda429-bg-dvt2-wtp.dtb
 arch/arm64/boot/dts/qcom/sda429-bg-wdp-overlay.dtbo
@@ -62,4 +67,4 @@ arch/arm64/boot/dts/qcom/sdm439-rcm-overlay.dtbo
 arch/arm64/boot/dts/qcom/sdm439.dtb
 vmlinux
 "
-POST_DEFCONFIG_CMDS="check_defconfig && disable_qm215go_config && set_dtbo_config && set_prima_config"
+POST_DEFCONFIG_CMDS="check_defconfig && set_dtbo_config && set_prima_config"
