@@ -1,6 +1,6 @@
 #!/hint/bash
 . "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.arm
-DEFCONFIG=msm8909-perf_defconfig
+DEFCONFIG=vendor/msm8909go-perf_defconfig
 FILES="
 .config
 System.map
