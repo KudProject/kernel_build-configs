@@ -5,5 +5,5 @@ function set_msm8937_32go_config() {
     # Disable CONFIG_ARCH_MSM8937 for Go targets
     "${KERNEL_DIR}"/scripts/config --file "${OUT_DIR}"/.config \
         -d ARCH_MSM8937
-    (cd "${OUT_DIR}" && make ${CC_LD_ARG} O="${OUT_DIR}" olddefconfig)
+    (cd "${OUT_DIR}" && make -s ${CC_LD_ARG} O="${OUT_DIR}" olddefconfig)
 }
