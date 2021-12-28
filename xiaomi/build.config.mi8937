@@ -1,0 +1,36 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.aarch64
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.aarch64
+. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.sdllvm
+DEFCONFIG=mi8937_defconfig
+FILES="
+.config
+System.map
+arch/arm64/boot/Image
+arch/arm64/boot/Image.gz
+arch/arm64/boot/Image.gz-dtb
+arch/arm64/boot/dts/qcom/msm8917-pmi8937-mtp-ugglite.dtb
+arch/arm64/boot/dts/qcom/msm8917-pmi8937-qrd-sku5-riva.dtb
+arch/arm64/boot/dts/qcom/msm8917-pmi8937-qrd-sku5-rolex.dtb
+arch/arm64/boot/dts/qcom/msm8937-pmi8950-mtp-prada.dtb
+arch/arm64/boot/dts/qcom/msm8937-pmi8950-qrd-land.dtb
+arch/arm64/boot/dts/qcom/msm8940-pmi8937-mtp-ugg.dtb
+arch/arm64/boot/dts/qcom/msm8940-pmi8950-qrd-sku7-santoni.dtb
+vmlinux
+"
+unset KERNEL_DIR
+KERNEL_DIR=private/msm-xiaomi-thorium-4.9
+LLVM=1
+# Temporary until LLVM=1 backports are present
+if [[ -n "${LLVM}" ]]; then
+  unset LLVM
+  AR=llvm-ar
+  CC=clang
+  LD=ld.lld
+  NM=llvm-nm
+  OBJCOPY=llvm-objcopy
+  OBJDUMP=llvm-objdump
+  STRIP=llvm-strip
+fi
+# Disable verifying generated defconfig for now, it will fail.
+#POST_DEFCONFIG_CMDS="check_defconfig"
