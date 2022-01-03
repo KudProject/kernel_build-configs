@@ -5,16 +5,5 @@
 unset KERNEL_DIR
 KERNEL_DIR=private/msm-xiaomi-thorium-4.9
 LLVM=1
-# Temporary until LLVM=1 backports are present
-if [[ -n "${LLVM}" ]]; then
-  unset LLVM
-  AR=llvm-ar
-  CC=clang
-  LD=ld.lld
-  NM=llvm-nm
-  OBJCOPY=llvm-objcopy
-  OBJDUMP=llvm-objdump
-  STRIP=llvm-strip
-fi
 # Disable verifying generated defconfig for now, it will fail.
 #POST_DEFCONFIG_CMDS="check_defconfig"
