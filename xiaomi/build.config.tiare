@@ -1,0 +1,12 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/xiaomi/build.config.msm8937_common
+DEFCONFIG=tiare_defconfig
+FILES="
+.config
+System.map
+arch/arm64/boot/Image
+arch/arm64/boot/Image.gz
+arch/arm64/boot/Image.gz-dtb
+arch/arm64/boot/dts/qcom/msm8917-pmi8937-qrd-sku5-tiare.dtb
+vmlinux
+"
