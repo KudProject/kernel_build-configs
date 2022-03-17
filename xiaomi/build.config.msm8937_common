@@ -9,5 +9,4 @@ unset KERNEL_DIR
 KERNEL_DIR=private/msm-xiaomi-thorium-4.9
 LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN=prebuilts/gas/linux-x86
 LLVM=1
-# Disable verifying generated defconfig for now, it will fail.
-#POST_DEFCONFIG_CMDS="check_defconfig"
+POST_DEFCONFIG_CMDS="check_defconfig"
