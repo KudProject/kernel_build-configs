@@ -1,2 +1,6 @@
 #!/hint/bash
 CC=clang
+case "$ARCH" in
+arm) CLANG_TRIPLE=arm-linux-gnueabi- ;;
+arm64) CLANG_TRIPLE=aarch64-linux-gnu- ;;
+esac
