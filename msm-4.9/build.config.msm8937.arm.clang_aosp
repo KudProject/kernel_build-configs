@@ -1,4 +1,0 @@
-#!/hint/bash
-. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.msm8937.arm
-. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.arm
-. "${ROOT_DIR}"/build-configs/msm-4.9/build.config.common.clang.aosp
