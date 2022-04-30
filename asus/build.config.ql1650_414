@@ -1,0 +1,27 @@
+#!/hint/bash
+. "${ROOT_DIR}"/build-configs/build.config
+unset IN_KERNEL_MODULES
+ARCH=arm64
+BRANCH=kernel.lnx.4.14.r22-rel
+CC=clang
+CLANG_PREBUILT_BIN=vendor/qcom/proprietary/llvm-arm-toolchain-ship/${CLANG_QTI_VERSION}/compiler/bin
+CLANG_TRIPLE=aarch64-linux-gnu-
+CROSS_COMPILE=aarch64-linux-android-
+DEFCONFIG=X00T_defconfig
+DTC_EXT="${ROOT_DIR}"/prebuilts/kernel-build-tools/linux-x86/bin/dtc
+export DTC_EXT
+FILES="
+.config
+System.map
+arch/arm64/boot/Image
+arch/arm64/boot/Image.gz
+arch/arm64/boot/Image.gz-dtb
+arch/arm64/boot/dts/qcom/sdm636-qrd-X00T.dtb
+vmlinux
+"
+HOSTCC="${ROOT_DIR}"/prebuilts-master/clang/host/linux-x86/clang-${CLANG_AOSP_VERSION}/bin/clang
+KERNEL_DIR=private/msm-asus-falcon-4.14
+LD_LIBRARY_PATH="${ROOT_DIR}"/vendor/qcom/proprietary/llvm-arm-toolchain-ship/${CLANG_QTI_VERSION}/compiler/lib"${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH
+LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN=prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+POST_DEFCONFIG_CMDS="check_defconfig"
